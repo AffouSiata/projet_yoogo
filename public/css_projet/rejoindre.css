@@ -4,7 +4,24 @@ body
     background: #0a57a2;
 }
 h2{
+    margin-top: 40px;
     font-size: 40px;
     color: white;
     text-align: center;
+}
+.formulaire{
+    height: 500px;
+    width: 700px;
+    padding: 30px;
+    margin: 20px auto;
+}
+.gauche input,select{
+    width: 300px;
+   
+}
+.gauche{
+    margin-right: 20px;
+}
+.droit input{
+    width: 330px;
 }
