@@ -1,14 +1,16 @@
 const express = require('express');
 const app = express();
+
 const acc= require("./router/indexRouter")
 const routerRejoindre= require("./router/InscriptionRouter")
 const routerContact= require("./router/contactRouter")
+const db = require('./connexion');
+// const e = require('express');
 
-// let con =require('./connexion')
+
 
 app.set('views','./views');
 app.set('view engine','ejs')
-
 app.use('/public',express.static('public'));
 
 
@@ -24,12 +26,23 @@ app.use('/public',express.static('public'));
 // })
 
 
+db.connect(function(error){
+    if(error){
+       console.log(error);
+    }
+    else{
+       console.log('connecté');
+       app.use('/Rejoindre',routerRejoindre);
+        app.use('/contact',routerContact);
+        app.use('/',acc);
+
+    }
+})
+
+
 
 
 // app.use('/inscription',acc);
-app.use('/Rejoindre',routerRejoindre);
-app.use('/contact',routerContact);
-app.use('/',acc);
 
 
 app.listen(3000,
