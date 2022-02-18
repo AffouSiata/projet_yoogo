@@ -1,0 +1,40 @@
+body{
+    background: #0a57a2;
+}
+.centre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    height: 600px;
+    width: 700px;
+    background-color: #FFF;
+}
+.centre h1{
+    text-align: center;
+    font-size: 65px;
+    padding-top: 20px;
+}
+form{
+    padding: 50px;
+}
+form label{
+    font-size: 45px;
+}
+form input{
+    width: 550px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+form button{
+    font-size: 40px;
+   margin-top: 30px;
+   width: 200px;
+   border: none;
+   background-color: green;
+   border-radius: 10px;
+   color: #FFF;
+}

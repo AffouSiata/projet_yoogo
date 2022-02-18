@@ -7,17 +7,14 @@ let azerty = bodyParser.urlencoded({ extended: false});
 
 
 
-
-
 router.get('/', azerty,function(req,res){
-    res.render('../views/Rejoindre')
-    let ddd = userQuery.inserer(req.body)
+    res.render('../views/pageconn')
+    let ddd = userQuery.sel(req.body)
     console.log(ddd);
 })
 
-
 router.post('/',azerty ,(req,res)=>{
-let ddd=userQuery.inserer(req.body)
+let ddd=userQuery.sel(req.body)
     console.log(ddd);
 
 })

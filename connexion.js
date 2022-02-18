@@ -6,7 +6,4 @@ let connect = mysql.createConnection({
    password:'11111',
    database:'projet_yoogo'
 })
-
-
-
 module.exports=connect;
